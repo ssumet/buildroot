@@ -14,3 +14,8 @@ steps:
     make qemu_x86_64_defconfig
     make
   displayName: 'make'
+- task: CopyFiles@2
+  inputs:
+    Contents: 'output/images/**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    CleanTargetFolder: true
