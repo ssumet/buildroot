@@ -9,12 +9,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- publish:  $(Build.ArtifactStagingDirectory)
 - script: |
     make qemu_x86_64_defconfig
   displayName: 'make'
 - task: CopyFiles@2
   inputs:
     Contents: '**'
-    TargetFolder: '$(BUILD_ARTIFACTSTAGINGDIRECTORY)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/test'
 
