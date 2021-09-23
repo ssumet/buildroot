@@ -14,7 +14,6 @@ steps:
   displayName: 'make'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.SourceVersion)'
     Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    TargetFolder: '$(BUILD_ARTIFACTSTAGINGDIRECTORY)'
 
