@@ -15,5 +15,5 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/test'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
